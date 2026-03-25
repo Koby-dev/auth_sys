@@ -1,0 +1,29 @@
+{% load static %}
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.success %} class="{{ message.success }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/register_style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form method="POST" action="{% url 'register' %}">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="btn-div">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

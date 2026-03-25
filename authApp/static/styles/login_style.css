@@ -1,0 +1,159 @@
+body {
+    /* background-color: antiquewhite; */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.main-container {
+    /* border: 5px solid black; */
+    border-radius: 10px;
+    width: 25%;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 5px 2px 2px rgb(176, 171, 171); */
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-div{
+    width: 100%;
+    height: inherit;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 120px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        width: 90%;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    input {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .main-container {
+        width: 100%;
+        height: auto;
+        padding: 25px 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    form {
+        gap: 12px;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 90px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    .main-container {
+        width: 95%;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    input {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    button {
+        width: 80px;
+        padding: 6px;
+        font-size: 11px;
+    }
+}
