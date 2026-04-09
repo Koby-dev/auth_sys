@@ -16,7 +16,7 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'unsafe-default-key-for-dev-only')
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = os.environ.get('DEBUG', 'False') == 'False'
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
 
 DATABASES = {
@@ -114,10 +114,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILESDIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# In development, Django automatically finds static files in app directories
+# STATICFILESDIRS is only needed if you have a project-level static directory
 
 #Redirect to home page after login
 LOGIN_REDIRECT_URL = 'home'
