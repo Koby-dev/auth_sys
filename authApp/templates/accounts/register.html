@@ -1,11 +1,4 @@
 {% load static %}
-{% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-            <li{% if message.success %} class="{{ message.success }}"{% endif %}>{{ message }}</li>
-        {% endfor %}
-    </ul>
-{% endif %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +8,13 @@
     <link rel="stylesheet" type="text/css" href="{% static 'styles/register_style.css' %}">
 </head>
 <body>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.success %} class="{{ message.success }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     <div class="container">
         <h2>Register</h2>
         <form method="POST" action="{% url 'register' %}">
