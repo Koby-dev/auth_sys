@@ -17,7 +17,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'unsafe-default-key-for-dev-only')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'auth-system-gz9p.onrender.com').split(',') if os.environ.get('ALLOWED_HOSTS') else ['auth-system-gz9p.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['auth-system-gz9p.onrender.com']
+# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'auth-system-gz9p.onrender.com').split(',') if os.environ.get('ALLOWED_HOSTS') else ['auth-system-gz9p.onrender.com', '127.0.0.1', 'localhost']
 DATABASES = {
     'default': dj_database_url.config(
         default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
