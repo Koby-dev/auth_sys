@@ -29,6 +29,10 @@ CSRF_TRUSTED_ORIGINS = [
     'https://auth-system-gz9p.onrender.com'
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+USE_X_FORWARDED_HOST = True
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
